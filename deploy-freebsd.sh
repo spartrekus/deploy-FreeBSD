@@ -7,9 +7,9 @@ echo "** Press Enter"
 echo =========================
 read abcd
 
-echo "MD5 (kernel.txz) = 0d4ed395541dbeb6ae9001afc351561e"
-echo "MD5 (base.txz) = 97216020220a816ab689b6ee25bbbd9e"
-echo "MD5 (mbr.bin) = be7329a1dfff69930ae2c8b12f2a0b6f"
+echo "MD5 kernel.txz = 0d4ed395541dbeb6ae9001afc351561e"
+echo "MD5 base.txz = 97216020220a816ab689b6ee25bbbd9e"
+echo "MD5 mbr.bin = be7329a1dfff69930ae2c8b12f2a0b6f"
 
 echo Copying mbr with dd...
 wget https://raw.githubusercontent.com/spartrekus/deploy-FreeBSD/master/mbr.bin -O mbr.bin
