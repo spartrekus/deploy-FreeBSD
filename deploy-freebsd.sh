@@ -51,6 +51,31 @@ echo Create fstab
 echo "/dev/da0s1a     /               ufs     rw      1       1" > /target/etc/fstab 
 echo "/dev/da0s1b     none            swap    sw      0       0" >> /target/etc/fstab 
 
+
+
+echo =========================
+echo Create rc.conf and wifi wpa config using local etc directory
+cp /etc/rc.conf /target/etc/rc.conf
+cp /etc/wpa_supplicant.conf /target/etc/
+
+
+echo =========================
+echo Copy wrapper
+
+mkdir /target/usr/local/bin
+cp /usr/local/bin/nconfig  /target/usr/local/bin
+cp /usr/local/bin/nswiss   /target/usr/local/bin
+
+echo =========================
+echo Entropy fix wrapper for lib
+cp /root/libcrypto.so.111  /target/root/
+cp /root/libssl.so.111     /target/root/ 
+
+
+echo =========================
+echo Process Completed
+
+
 echo Umount
 cd /tmp
 umount /target
@@ -62,5 +87,4 @@ echo =========================
 echo "Mission Completed."
 echo "End of Transmission."
 echo =========================
-
 
