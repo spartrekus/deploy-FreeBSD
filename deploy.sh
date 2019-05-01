@@ -81,9 +81,13 @@ cp /root/libcrypto.so.111  /target/root/
 cp /root/libssl.so.111     /target/root/ 
 
 
+  cd /root 
+  fetch -R https://raw.githubusercontent.com/spartrekus/freebsd-13-entropyfix/master/libssl.so.111  
+  fetch  -R https://raw.githubusercontent.com/spartrekus/freebsd-13-entropyfix/master/libcrypto.so.111 
+
+
 echo =========================
 echo Process Completed
-
 
 echo Umount
 cd /tmp
@@ -93,7 +97,11 @@ cd /tmp
 mount
 
 echo =========================
+ date 
+echo =========================
 echo "Mission Completed."
 echo "End of Transmission."
 echo =========================
+
+
 
